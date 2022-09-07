@@ -2,22 +2,28 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+import { getonereciep } from "../js/actions/recipeActions";
 
 const RecipeDetails = () => {
   const { id } = useParams();
-  const [oneRescip, setOneRescip] = useState({});
-  const [loading, setLoading] = useState(true);
+  const dispatch=useDispatch()
+  const {oneRescip,loading}=useSelector(state=>state.receipReducer)
+// console.log(onerescip)
+  // const [oneRescip, setOneRescip] = useState({});
+  // const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const getoneRecipe = async () => {
-      try {
-        const { data } =
-          await axios.get(`https://api.edamam.com/api/recipes/v2/${id}?type=public&app_id=01903511&app_key=586dab1ccb1f25cc9e26ddc82ac993d5%09
-            `);
-        setOneRescip(data.recipe);
-        setLoading(false);
-      } catch (error) {}
-    };
-    getoneRecipe();
+    // const getoneRecipe = async () => {
+    //   try {
+    //     const { data } =
+    //       await axios.get(`https://api.edamam.com/api/recipes/v2/${id}?type=public&app_id=01903511&app_key=586dab1ccb1f25cc9e26ddc82ac993d5%09
+    //         `);
+    //     setOneRescip(data.recipe);
+    //     setLoading(false);
+    //   } catch (error) {}
+    // };
+    // getoneRecipe();
+    dispatch(getonereciep(id))
   }, [id]);
 
   return (

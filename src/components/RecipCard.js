@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 function RecipCard({el}) {
-    console.log(el.recipe)
+    // console.log(el.recipe)
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={el.recipe.image} />
