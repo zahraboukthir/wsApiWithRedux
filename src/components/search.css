@@ -1,0 +1,32 @@
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .search-form{
+    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .search-bar{
+    font-size: 18px;
+    width: 50%;
+    border-radius: 30px;
+    border-color: rgb(241, 237, 237);
+    padding: 10px;
+    margin: 10px;
+    }
+    
+    .search-button{
+    box-shadow: 0 5px 20px rgb(156, 155, 155);
+    font-size: 18px;
+    background: #26AD5F;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: white;
+    }
+    

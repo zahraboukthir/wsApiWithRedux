@@ -6,6 +6,7 @@ import Search from "./components/Search";
 import {Routes,Route} from 'react-router-dom'
 import RecipeDetails from "./components/RecipeDetails";
 import { useSelector } from 'react-redux';
+import T from "./components/T";
 function App() {
   // const [Rescip, setRescip] = useState([]);
   // const [loading, setLoading] = useState(true);
@@ -41,6 +42,7 @@ function App() {
         </div>
       }/>
         <Route path="/:id" element={<RecipeDetails/>}/>
+
       </Routes>
      
     </div>

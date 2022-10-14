@@ -3,7 +3,7 @@ import RecipCard from './RecipCard'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getallrecieps } from './../js/actions/recipeActions';
-
+import "./reciep.css"
 
 export default function ListRecip({searchedvalue}) {
   // {data}
@@ -16,7 +16,7 @@ const loading=useSelector(state=>state.receipReducer.loading)
   console.log(loading)
 console.log(list)
   return (
-    <div style={{display:"flex",justifyContent:"space-around",flexWrap:"wrap"}}>
+    <div style={{display:"flex",flexWrap:"wrap" ,justifyContent:"space-around" }}>
         { loading ? (
         "loading ...."
       ) :list.map((el,index)=><RecipCard key={index} el={el}/>)}
